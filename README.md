@@ -1,4 +1,4 @@
-# MongoDB Fundamentals - Week 1
+
 
 ## Setup Instructions
 
