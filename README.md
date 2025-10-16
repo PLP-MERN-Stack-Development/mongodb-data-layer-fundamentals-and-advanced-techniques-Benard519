@@ -1,59 +1,191 @@
-# MongoDB Fundamentals - Week 1
 
-## Setup Instructions
+---
 
-Before you begin this assignment, please make sure you have the following installed:
+````markdown
+# 📚 PLP MongoDB Assignment – Week 1
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+## 🗄️ MongoDB – Data Layer Fundamentals and Advanced Techniques
 
-### Node.js Package Setup
+This project demonstrates my understanding of MongoDB fundamentals using Node.js.  
+It includes database setup, CRUD operations, advanced queries, aggregation pipelines, and indexing for performance optimization.
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+---
+
+## 🚀 Objectives
+
+- Create and connect to a MongoDB database  
+- Perform CRUD (Create, Read, Update, Delete) operations  
+- Run advanced queries with filters, projections, sorting, and pagination  
+- Use aggregation pipelines for data analysis  
+- Implement indexing and measure query performance  
+
+---
+
+## 🧰 Technologies Used
+
+- **Node.js** (v18 or higher)
+- **MongoDB Community Edition** (local setup)
+- **MongoDB Shell (mongosh)** or **MongoDB Compass**
+- **MongoDB Node.js Driver**
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1️⃣ Install Requirements
+
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/en/download/)
+- [MongoDB Community Edition](https://www.mongodb.com/try/download/community)
+- MongoDB Shell (`mongosh`) and MongoDB Compass (optional GUI)
+
+---
+
+### 2️⃣ Clone the Repository
 
 ```bash
-# Initialize a package.json file
-npm init -y
+git clone <your-assignment-repo-link>
+cd plp_mongodb_assignment
+````
 
-# Install the MongoDB Node.js driver
+---
+
+### 3️⃣ Initialize and Install Dependencies
+
+Run the following commands in your terminal:
+
+```bash
+npm init -y
 npm install mongodb
 ```
 
-## Assignment Overview
+---
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+### 4️⃣ Insert Sample Data
 
-## Submission
+Run the provided script to populate your database with 10 sample books:
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
+```bash
+node insert_books.js
+```
 
-## Getting Started
+✅ You should see:
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+```
+Connected to MongoDB successfully!
+Successfully inserted 10 books.
+```
 
-## Files Included
+You can confirm the inserted data using MongoDB Compass or the shell:
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+```bash
+mongosh
+use plp_bookstore
+db.books.find().pretty()
+```
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+### 5️⃣ Run Queries and Operations
 
-## Resources
+Execute all CRUD, aggregation, and indexing operations:
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+```bash
+node queries.js
+```
+
+This file performs:
+
+* CRUD operations
+* Advanced filtering and projection
+* Aggregation pipelines
+* Index creation and performance analysis
+
+---
+
+## 📊 Database Details
+
+* **Database Name:** `plp_bookstore`
+* **Collection Name:** `books`
+* **Document Structure:**
+
+  ```json
+  {
+    "title": "Example Book Title",
+    "author": "Author Name",
+    "genre": "Genre",
+    "published_year": 2020,
+    "price": 25.99,
+    "in_stock": true,
+    "pages": 300,
+    "publisher": "Publisher Name"
+  }
+  ```
+
+---
+
+## 🧮 Aggregation Pipelines Implemented
+
+1. Average price of books by genre
+2. Author with the most books
+3. Grouping books by publication decade
+
+---
+
+## ⚡ Indexing
+
+Indexes were created to improve performance:
+
+* Single-field index on **title**
+* Compound index on **author** and **published_year**
+
+Performance improvement was tested using the `.explain()` method.
+
+---
+
+## 📸 Screenshot
+
+Include a screenshot showing:
+
+* Your `plp_bookstore` database
+* The `books` collection
+* Sample inserted documents
+
+---
+
+## ✅ Expected Outcome
+
+* Functional MongoDB database with structured data
+* Complete set of CRUD and aggregation queries
+* Demonstrated use of indexing and query optimization
+
+---
+
+### 👨🏾‍💻 Developed by
+
+**Benard Machuka**
+
+*Bachelor of Science in Computer Science – University of Eldoret*
+*Power Learn Project (MERN Stack Development Pathway)*
+
+````
+
+---
+
+### ✅ After adding this file:
+You’ll have your **3 required files**:
+1. `insert_books.js`  
+2. `queries.js`  
+3. `README.md`  
+
+Then just commit and push everything:
+
+```bash
+git add .
+git commit -m "Week 1 MongoDB Assignment completed"
+git push origin main
+````
+
+---
+
+Would you like me to write a short sample **GitHub commit message and folder structure** (so your repo looks clean and professional when you submit)?
