@@ -1,7 +1,7 @@
 
 ---
 
-````markdown
+
 # 📚 PLP MongoDB Assignment – Week 1
 
 ## 🗄️ MongoDB – Data Layer Fundamentals and Advanced Techniques
@@ -132,35 +132,6 @@ This file performs:
 
 ---
 
-## ⚡ Indexing
-
-Indexes were created to improve performance:
-
-* Single-field index on **title**
-* Compound index on **author** and **published_year**
-
-Performance improvement was tested using the `.explain()` method.
-
----
-
-## 📸 Screenshot
-
-Include a screenshot showing:
-
-* Your `plp_bookstore` database
-* The `books` collection
-* Sample inserted documents
-
----
-
-## ✅ Expected Outcome
-
-* Functional MongoDB database with structured data
-* Complete set of CRUD and aggregation queries
-* Demonstrated use of indexing and query optimization
-
----
-
 ### 👨🏾‍💻 Developed by
 
 **Benard Machuka**
@@ -169,23 +140,3 @@ Include a screenshot showing:
 *Power Learn Project (MERN Stack Development Pathway)*
 
 ````
-
----
-
-### ✅ After adding this file:
-You’ll have your **3 required files**:
-1. `insert_books.js`  
-2. `queries.js`  
-3. `README.md`  
-
-Then just commit and push everything:
-
-```bash
-git add .
-git commit -m "Week 1 MongoDB Assignment completed"
-git push origin main
-````
-
----
-
-Would you like me to write a short sample **GitHub commit message and folder structure** (so your repo looks clean and professional when you submit)?
